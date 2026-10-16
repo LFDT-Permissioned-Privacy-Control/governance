@@ -1,18 +1,28 @@
 teams:
-- name: lf-staff
-  maintainers:
-  - ryjones
-  members:
-  - thelinuxfoundation
-  - jwagantall
-- name: permissioned-privacy-control-maintainers
-  maintainers:
-  - ryjones
-  members:
-  - IvanBelyakoff
-  - mandrigin
+  - name: lf-staff
+    maintainers:
+      - jwagantall
+      - ryjones
+      - thelinuxfoundation
+    members: []
+  - name: permissioned-privacy-control-maintainers
+    maintainers:
+      - IvanBelyakoff
+    members:
+      - mandrigin
 repositories:
-- name: .github
-  visibility: public
-- name: governance
-  visibility: public
+  - name: .github
+    teams:
+      lf-staff: maintain
+      permissioned-privacy-control-maintainers: maintain
+    visibility: public
+  - name: governance
+    teams:
+      lf-staff: maintain
+      permissioned-privacy-control-maintainers: maintain
+    visibility: public
+  - name: permissioned-privacy-control
+    teams:
+      lf-staff: maintain
+      permissioned-privacy-control-maintainers: maintain
+    visibility: public
